@@ -23,3 +23,6 @@ DESTDIR="$(realpath artifacts)" cmake --install build --prefix /usr
 
 echo "Creating archive"
 tar -czf artifacts.tar.gz artifacts
+
+echo "archive created path: $(realpath artifacts.tar.gz)"
+echo "archive size: $(du -sh $(realpath artifacts.tar.gz))"
