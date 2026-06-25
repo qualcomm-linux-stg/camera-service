@@ -1,4 +1,5 @@
-et -e
+#!/bin/bash
+set -e
 
 echo "Checking disk space"
 df -h .
