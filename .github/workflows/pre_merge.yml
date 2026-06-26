@@ -28,7 +28,12 @@ jobs:
         run: |
           chmod +x ci/build.sh
           ./ci/build.sh
-      
+
+      - name: Prepare upload directory
+        run: |
+          mkdir -p upload_dir
+          mv artifacts.tar.gz upload_dir/
+          
       - name: Upload artifacts to S3 bucket
         uses: qualcomm-linux/upload-private-artifact-action@aws-v4
         with:
