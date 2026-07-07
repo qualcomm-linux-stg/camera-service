@@ -50,7 +50,7 @@ jobs:
       - name: Prepare upload directory
         run: |
           mkdir -p upload_dir
-          mv imsdk-artifacts.tar.gz upload_dir/
+          mv cam-service-artifacts.tar.gz upload_dir/
 
       - name: Generate build URLs JSON
         env:
